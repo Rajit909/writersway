@@ -25,6 +25,10 @@ const adminNavLink = { href: '/admin', label: 'Admin', icon: <Shield size={18} /
 export function Header() {
   const pathname = usePathname();
 
+  if (pathname.startsWith('/admin')) {
+    return null;
+  }
+
   const renderLink = (link: { href: string; label: string; icon: React.ReactNode }, isMobile = false) => {
     const isActive = link.href === '/' ? pathname === link.href : pathname.startsWith(link.href);
     return (

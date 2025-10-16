@@ -120,6 +120,8 @@ export const getPostsByCategory = (slug: string) => {
 
 export const getAllCategories = () => categories;
 export const getCategoryBySlug = (slug: string) => categories.find(c => c.slug === slug);
+export const getCategoryById = (id: string) => categories.find(c => c.id === id);
+
 
 // Admin "API"
 export const getPostById = (id: string) => posts.find(p => p.id === id);

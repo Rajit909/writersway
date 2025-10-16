@@ -91,5 +91,5 @@ export async function createCategory(formData: FormData) {
 
 export async function deleteCategory(id: string) {
     deleteCategoryData(id);
-    revalidatePath("/admin/categories");
+revalidatePath("/admin/categories");
 }
