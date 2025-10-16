@@ -55,6 +55,26 @@ export default function PostPage({ params }: { params: { slug: string } }) {
       <div className="prose prose-invert prose-lg max-w-none text-foreground/90 prose-headings:font-headline prose-headings:text-foreground prose-a:text-primary prose-strong:text-foreground">
         <p>{post.content}</p>
       </div>
+
+      <div className="mt-12 border-t pt-8">
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-4">
+            <div>
+              <p className="text-sm text-muted-foreground">Written by</p>
+              <p className="font-semibold text-foreground">{post.author}</p>
+            </div>
+            {category && (
+              <>
+                <div className="h-10 border-l border-border"></div>
+                <div>
+                  <p className="text-sm text-muted-foreground">Posted in</p>
+                  <Link href={`/category/${category.slug}`} className="hover:underline">
+                      <Badge variant="outline">{category.name}</Badge>
+                  </Link>
+                </div>
+              </>
+            )}
+        </div>
+      </div>
       
       <SuggestedArticle currentPost={post} allPosts={allPosts} />
 
