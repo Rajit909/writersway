@@ -12,6 +12,7 @@ import {
   SheetContent,
   SheetTrigger,
 } from '@/components/ui/sheet';
+import { ThemeToggle } from './ThemeToggle';
 
 const mainNavLinks = [
   { href: '/', label: 'Home', icon: <LayoutGrid size={18} /> },
@@ -59,6 +60,7 @@ export function Header() {
         </nav>
 
         <div className="flex flex-1 items-center justify-end gap-2">
+            <ThemeToggle />
             <div className="hidden md:block">
                 <Button variant="ghost" asChild>
                     {renderLink(adminNavLink)}
