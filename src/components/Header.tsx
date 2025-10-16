@@ -31,30 +31,32 @@ export function Header() {
         href={link.href}
         className={cn(
           'flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition-colors',
-          isActive
-            ? 'bg-primary/10 text-primary'
-            : 'text-muted-foreground hover:bg-accent/50 hover:text-foreground',
+           isActive
+            ? 'text-primary'
+            : 'text-muted-foreground hover:text-foreground',
           isMobile && 'text-base w-full'
         )}
       >
-        {link.icon}
+        {!isMobile && link.icon}
         {link.label}
       </Link>
     );
   };
   
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
         <Logo />
         
-        <nav className="hidden md:flex items-center space-x-4 lg:space-x-6 ml-6">
+        <nav className="hidden md:flex items-center space-x-2 lg:space-x-4 ml-6">
           {mainNavLinks.map(link => renderLink(link))}
         </nav>
 
         <div className="flex flex-1 items-center justify-end gap-2">
             <div className="hidden md:block">
-                {renderLink(adminNavLink)}
+                <Button variant="ghost" asChild>
+                    {renderLink(adminNavLink)}
+                </Button>
             </div>
 
             <Sheet>
@@ -70,7 +72,9 @@ export function Header() {
                     </div>
                     <div className="grid gap-4 p-4">
                         {mainNavLinks.map(link => renderLink(link, true))}
-                        {renderLink(adminNavLink, true)}
+                        <div className="border-t pt-4 mt-4">
+                             {renderLink(adminNavLink, true)}
+                        </div>
                     </div>
                 </SheetContent>
             </Sheet>
