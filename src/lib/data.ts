@@ -2,9 +2,9 @@ import type { Post, Category } from './types';
 import { PlaceHolderImages } from './placeholder-images';
 
 let categories: Category[] = [
-  { id: '1', name: 'Technology', slug: 'technology' },
-  { id: '2', name: 'Productivity', slug: 'productivity' },
-  { id: '3', name: 'Design', slug: 'design' },
+  { id: '1', name: 'News', slug: 'news' },
+  { id: '2', name: 'Tech', slug: 'tech' },
+  { id: '3', name: 'Education', slug: 'education' },
 ];
 
 let posts: Post[] = [
@@ -13,7 +13,7 @@ let posts: Post[] = [
     title: 'The Future of Web Development',
     slug: 'future-of-web-development',
     content: 'The web is constantly evolving. In this article, we explore the upcoming trends in web development for 2024 and beyond, including the rise of server components, edge computing, and AI-driven development tools. The landscape feels both exciting and a little daunting, but the potential for creating richer user experiences is immense. We are optimistic about what is to come.',
-    categoryId: '1',
+    categoryId: '2',
     imageUrl: PlaceHolderImages[0].imageUrl,
     imageHint: PlaceHolderImages[0].imageHint,
     author: 'Jane Doe',
@@ -21,10 +21,10 @@ let posts: Post[] = [
   },
   {
     id: '2',
-    title: 'Mastering Productivity: 5 Essential Tips',
-    slug: 'mastering-productivity',
-    content: 'In today\'s fast-paced world, being productive is key. This post outlines five simple yet powerful strategies to boost your productivity. From the Pomodoro Technique to the Two-Minute Rule, these tips will help you manage your time effectively and achieve your goals. It\'s a struggle for everyone, and sometimes it feels like you are losing the battle against distraction. These feelings are normal, but with discipline, you can overcome them.',
-    categoryId: '2',
+    title: 'Breaking News in the Tech World',
+    slug: 'breaking-tech-news',
+    content: 'A major breakthrough has just been announced in the field of quantum computing. This could revolutionize everything from medicine to finance. Experts are cautiously optimistic, but the road ahead is long. The announcement has sent shockwaves through the industry.',
+    categoryId: '1',
     imageUrl: PlaceHolderImages[1].imageUrl,
     imageHint: PlaceHolderImages[1].imageHint,
     author: 'John Smith',
@@ -32,9 +32,9 @@ let posts: Post[] = [
   },
   {
     id: '3',
-    title: 'Minimalist Design Principles',
-    slug: 'minimalist-design-principles',
-    content: 'Minimalism is more than just an aesthetic; it\'s a design philosophy. We delve into the core principles of minimalist design, such as "less is more," use of white space, and focusing on typography. See how these principles can create clean, beautiful, and user-friendly interfaces. It brings a sense of calm and clarity to the digital world.',
+    title: 'The Importance of Lifelong Learning',
+    slug: 'lifelong-learning-importance',
+    content: 'In an ever-changing world, the ability to learn and adapt is more important than ever. This article explores the benefits of lifelong learning and provides practical tips for staying curious and engaged. Education doesn\'t stop when you leave school; it\'s a journey that lasts a lifetime.',
     categoryId: '3',
     imageUrl: PlaceHolderImages[2].imageUrl,
     imageHint: PlaceHolderImages[2].imageHint,
@@ -46,7 +46,7 @@ let posts: Post[] = [
     title: 'Getting Started with Next.js 14',
     slug: 'getting-started-with-nextjs-14',
     content: 'Next.js continues to dominate the React framework landscape. This guide provides a step-by-step walkthrough for setting up a new project with Next.js 14, covering the App Router, Server Actions, and styling with Tailwind CSS. The new features can be overwhelming, and the documentation is sometimes lacking, which creates a frustrating learning experience for newcomers. We hope this guide helps.',
-    categoryId: '1',
+    categoryId: '2',
     imageUrl: PlaceHolderImages[3].imageUrl,
     imageHint: PlaceHolderImages[3].imageHint,
     author: 'Michael Brown',
@@ -54,10 +54,10 @@ let posts: Post[] = [
   },
   {
     id: '5',
-    title: 'The Art of Digital Note-Taking',
-    slug: 'art-of-digital-note-taking',
-    content: 'Transitioning from paper to digital notes? This article compares popular note-taking apps and methodologies to help you find the perfect system. A well-organized digital notebook can be a powerful tool for learning and creativity. The feeling of having all your thoughts organized is incredibly satisfying.',
-    categoryId: '2',
+    title: 'Online Courses Revolutionize Education',
+    slug: 'online-courses-education',
+    content: 'The rise of MOOCs and online learning platforms has made education more accessible than ever. We look at the pros and cons of online learning and how it is shaping the future of education. The flexibility is a huge advantage, but it requires self-discipline.',
+    categoryId: '3',
     imageUrl: PlaceHolderImages[4].imageUrl,
     imageHint: PlaceHolderImages[4].imageHint,
     author: 'Sarah Green',
@@ -65,10 +65,10 @@ let posts: Post[] = [
   },
   {
     id: '6',
-    title: 'UI vs. UX: A Clear Distinction',
-    slug: 'ui-vs-ux-distinction',
-    content: 'The terms UI and UX are often used interchangeably, but they represent different aspects of design. We break down the roles and responsibilities of UI and UX designers to clarify the confusion. Understanding this difference is crucial for building successful products. It’s a wonderful collaboration when both work in harmony.',
-    categoryId: '3',
+    title: 'Latest Updates from the Tech Industry',
+    slug: 'latest-tech-updates',
+    content: 'This week in tech: a new AI model that can generate video from text, a major acquisition in the gaming industry, and the latest news on the right to repair movement. It is hard to keep up with the rapid pace of innovation.',
+    categoryId: '1',
     imageUrl: PlaceHolderImages[5].imageUrl,
     imageHint: PlaceHolderImages[5].imageHint,
     author: 'David Black',

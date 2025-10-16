@@ -1,5 +1,7 @@
+import Link from 'next/link';
 import { BlogPostCard } from '@/components/BlogPostCard';
 import { getAllPosts, getAllCategories } from '@/lib/data';
+import { Badge } from '@/components/ui/badge';
 
 export default function Home() {
   const posts = getAllPosts();
@@ -15,6 +17,19 @@ export default function Home() {
           Exploring ideas, one post at a time.
         </p>
       </header>
+
+      <div className="mb-12">
+        <h2 className="text-2xl font-headline font-bold mb-4 text-center">Filter by Category</h2>
+        <div className="flex flex-wrap justify-center gap-2">
+          {categories.map((category) => (
+            <Link key={category.id} href={`/category/${category.slug}`}>
+              <Badge variant="outline" className="text-lg px-4 py-2 hover:bg-primary hover:text-primary-foreground transition-colors">
+                {category.name}
+              </Badge>
+            </Link>
+          ))}
+        </div>
+      </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {posts.map((post) => {
