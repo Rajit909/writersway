@@ -4,6 +4,7 @@ import { cn } from '@/lib/utils';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Toaster } from "@/components/ui/toaster";
+import { WhatsAppChat } from '@/components/WhatsAppChat';
 
 export const metadata: Metadata = {
   title: 'Visionary Voice',
@@ -30,6 +31,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />
+        <WhatsAppChat />
         <Toaster />
       </body>
     </html>
