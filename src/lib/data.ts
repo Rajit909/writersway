@@ -74,6 +74,39 @@ let posts: Post[] = [
     author: 'David Black',
     publishedAt: '2024-05-02',
   },
+  {
+    id: '7',
+    title: 'AI in the Classroom',
+    slug: 'ai-in-the-classroom',
+    content: 'Artificial intelligence is poised to transform education as we know it. From personalized learning paths to automated grading, we explore the potential benefits and challenges of integrating AI into the classroom. The possibilities are exciting, but ethical considerations are paramount.',
+    categoryId: '3',
+    imageUrl: PlaceHolderImages[6].imageUrl,
+    imageHint: PlaceHolderImages[6].imageHint,
+    author: 'Laura Wilson',
+    publishedAt: '2024-04-28',
+  },
+  {
+    id: '8',
+    title: 'The Rise of Cloud-Native Technologies',
+    slug: 'rise-of-cloud-native',
+    content: 'Cloud-native is more than just a buzzword; it\'s a fundamental shift in how we build and run applications. This article breaks down the core concepts of cloud-native, including containers, microservices, and Kubernetes. The learning curve is steep, but the benefits in scalability and resilience are undeniable.',
+    categoryId: '2',
+    imageUrl: PlaceHolderImages[7].imageUrl,
+    imageHint: PlaceHolderImages[7].imageHint,
+    author: 'Chris Martinez',
+    publishedAt: '2024-04-25',
+  },
+  {
+    id: '9',
+    title: 'Global Tech Giants Face Scrutiny',
+    slug: 'global-tech-giants-scrutiny',
+    content: 'Regulators around the world are taking a closer look at the power and influence of major technology companies. We cover the latest in antitrust investigations and data privacy regulations that could reshape the digital landscape. It\'s a complex issue with no easy answers.',
+    categoryId: '1',
+    imageUrl: PlaceHolderImages[8].imageUrl,
+    imageHint: PlaceHolderImages[8].imageHint,
+    author: 'Jessica Lee',
+    publishedAt: '2024-04-22',
+  },
 ];
 
 // Public API
@@ -121,5 +154,7 @@ export const addCategory = (category: Omit<Category, 'id'>) => {
 export const deleteCategory = (id: string) => {
   const initialLength = categories.length;
   categories = categories.filter(c => c.id !== id);
+  // Also remove posts in this category
+  posts = posts.filter(p => p.categoryId !== id);
   return categories.length < initialLength;
 };

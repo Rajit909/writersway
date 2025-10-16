@@ -35,6 +35,24 @@
       "description": "A quiet library with rows of books",
       "imageUrl": "https://picsum.photos/seed/6/600/400",
       "imageHint": "library books"
+    },
+    {
+      "id": "7",
+      "description": "Modern office with collaborative space",
+      "imageUrl": "https://picsum.photos/seed/7/600/400",
+      "imageHint": "modern office"
+    },
+    {
+      "id": "8",
+      "description": "Person coding on a laptop in a cafe",
+      "imageUrl": "https://picsum.photos/seed/8/600/400",
+      "imageHint": "coding laptop"
+    },
+    {
+      "id": "9",
+      "description": "Global network connections visualization",
+      "imageUrl": "https://picsum.photos/seed/9/600/400",
+      "imageHint": "global network"
     }
   ]
 }
