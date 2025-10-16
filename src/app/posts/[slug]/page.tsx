@@ -23,7 +23,7 @@ export default function PostPage({ params }: { params: { slug: string } }) {
 
   return (
     <article className="container max-w-4xl mx-auto px-4 py-8 md:py-12">
-       <Link href="/" className="inline-flex items-center gap-2 text-primary hover:underline mb-6">
+       <Link href="/posts" className="inline-flex items-center gap-2 text-primary hover:underline mb-6">
         <ArrowLeft size={16} />
         Back to all posts
       </Link>
