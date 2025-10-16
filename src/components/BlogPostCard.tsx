@@ -15,7 +15,7 @@ type BlogPostCardProps = {
 export function BlogPostCard({ post, category, isFeatured = false }: BlogPostCardProps) {
   if (isFeatured) {
     return (
-      <Card className="overflow-hidden md:grid md:grid-cols-2 border-border/60 hover:border-primary/50 transition-all duration-300 group">
+      <Card className="overflow-hidden md:grid md:grid-cols-2 border-border/60 hover:border-primary/50 transition-all duration-300 group bg-secondary/20">
         <div className="relative h-64 md:h-full w-full">
             <Image
               src={post.imageUrl}
@@ -25,7 +25,7 @@ export function BlogPostCard({ post, category, isFeatured = false }: BlogPostCar
               data-ai-hint={post.imageHint}
               priority
             />
-             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
         </div>
         <div className="p-6 md:p-8 flex flex-col justify-center">
             <CardHeader className="p-0 mb-4">

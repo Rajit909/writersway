@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, LayoutGrid, FolderKanban, Shield, Mail } from 'lucide-react';
+import { Menu, LayoutGrid, FolderKanban, Shield, Mail, Info } from 'lucide-react';
 
 import { Logo } from '@/components/Logo';
 import { cn } from '@/lib/utils';
@@ -16,6 +16,7 @@ import {
 const mainNavLinks = [
   { href: '/', label: 'Home', icon: <LayoutGrid size={18} /> },
   { href: '/categories', label: 'Categories', icon: <FolderKanban size={18} /> },
+  { href: '/about', label: 'About', icon: <Info size={18} /> },
   { href: '/contact', label: 'Contact', icon: <Mail size={18} /> },
 ];
 
