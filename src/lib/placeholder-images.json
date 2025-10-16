@@ -1,3 +1,40 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "1",
+      "description": "Abstract teal and grey geometric shapes",
+      "imageUrl": "https://picsum.photos/seed/1/600/400",
+      "imageHint": "abstract technology"
+    },
+    {
+      "id": "2",
+      "description": "Minimalist desk setup with a laptop",
+      "imageUrl": "https://picsum.photos/seed/2/600/400",
+      "imageHint": "minimalist desk"
+    },
+    {
+      "id": "3",
+      "description": "A person writing in a notebook with a teal pen",
+      "imageUrl": "https://picsum.photos/seed/3/600/400",
+      "imageHint": "writing notebook"
+    },
+    {
+      "id": "4",
+      "description": "Cityscape at dusk with teal and grey tones",
+      "imageUrl": "https://picsum.photos/seed/4/600/400",
+      "imageHint": "city dusk"
+    },
+    {
+      "id": "5",
+      "description": "Close-up of a computer circuit board with teal lighting",
+      "imageUrl": "https://picsum.photos/seed/5/600/400",
+      "imageHint": "circuit board"
+    },
+    {
+      "id": "6",
+      "description": "A quiet library with rows of books",
+      "imageUrl": "https://picsum.photos/seed/6/600/400",
+      "imageHint": "library books"
+    }
+  ]
 }
