@@ -33,15 +33,21 @@ const prompt = ai.definePrompt({
   name: 'suggestArticleBasedOnSentimentPrompt',
   input: {schema: SuggestedArticleBasedOnSentimentInputSchema},
   output: {schema: SuggestedArticleBasedOnSentimentOutputSchema},
-  prompt: `You are a blog content curator. Given the content of the current blog article and a list of available articles, you will suggest the most relevant article based on the sentiment expressed in the current article.
+  prompt: `You are a blog content curator. Your task is to recommend an article from a provided list based on the content of the current article.
 
-Current Article Content: {{{articleContent}}}
+You MUST choose one of the titles from the 'Available Articles' list. Do not create or suggest any article titles that are not on this list.
 
-Available Articles: {{#each availableArticles}}{{{this}}}\n{{/each}}
+Current Article Content:
+"{{{articleContent}}}"
 
-Consider the sentiment of the current article and suggest an article that aligns with the reader's interests and emotional connection to the current topic. Explain your reasoning for the suggestion in the reasoning field.
+Available Articles:
+{{#each availableArticles}}
+- {{{this}}}
+{{/each}}
 
-Suggested Article:`,
+Analyze the sentiment and topic of the "Current Article Content". Then, select the most relevant article from the "Available Articles" list that a reader would likely be interested in next.
+
+Provide your answer in the requested format, ensuring the 'suggestedArticle' field contains the exact title of the article you chose from the list. Explain your choice in the 'reasoning' field.`,
 });
 
 const suggestedArticleBasedOnSentimentFlow = ai.defineFlow(
